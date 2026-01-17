@@ -1,0 +1,64 @@
+/*reset inicial da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*garante que bordas e padding n aumentem o tamanho dos elementos*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{  /*permite mudar atributos em todo o site, alterando em apenas um lugar*/
+    --bg-color: #245255; /*cor principal do plano de fundo*/
+    --text-color: #e6edf3;
+    --primary-color: #9ae00d;
+    --card-bg: #161b22;
+    --border-color:#30363d;
+}
+
+body{
+    background-color: var(--bg-color); /*usa a variavel de cor de fundo*/
+    color: var(--text-color); /*usa a variavel de cor de texto*/
+    line-height: 1.6; /*define espaçamento entre linhas*/
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto; /*sem amrgem e centralizado na tela*/
+    padding: 0 20px;
+
+}
+
+.section-pad{
+    padding: 80px;
+}
+
+.navbar{
+    background-color: #161b22d0;
+    backdrop-filter: blur(10px);
+    position: fixed; /*mantem o menu sempre visívle no topo*/
+    width: 100%; /*header ocupa toda a largura do site*/
+    z-index: 1000;
+}
+
+.navbar-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .highlight{color: var(--primary-color)} /**/
+
+.menu a{
+
+}
+
+.btn-nav{
+    
+}
