@@ -82,3 +82,93 @@ body{
     padding-bottom: 80px;
     background: radial-gradient(circle at top, #1f2937 0%, #0d1117 70%);
 }
+
+.tag{
+    background-color: #1f2428;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;  
+}
+
+.hero h1{
+    font-size: 42px;  
+    margin: 20px 0px;      
+ }
+
+.hero p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #8b949e;
+    margin: 0 auto 40px auto;   
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    
+}
+
+.btn-primary:hover{
+    background-color: var(--bg-color);
+
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.btn-outline:hover{
+    background-color: var(--border-color);
+}
+
+/*módulos 0 que você vai aprender*/
+
+.row{
+    display: flex;
+    gap: 30px; /*distnaciamento entre os cards*/
+    margin-top: 40px;    
+}
+
+.card{
+    flex:1; /*os cards ficam do mesmo tamanho*/
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding:  30px;
+    border-radius: 12px;
+}
+
+.icon-box{
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+footer{ /*não precisa do ponto pq n é classe*/
+    text-align: center;
+    padding: 40px;
+    color: #8b949e;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title{
+    text-align: center;
+}
+
