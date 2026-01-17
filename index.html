@@ -65,6 +65,35 @@
         </div>
     </section>
 
+    <section id="cadastro" class="section-pad bg-darker">
+        <div class="container form-wrapper">
+            <h2>Garanta sua vaga</h2>
+            <form id="formCadastro">
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Mínimo 8 caracteres.">
+                </div>
+
+                <ul class="validation-list">
+                    <li id="req-length" class="invalid"><i class="ph ph-circle"></i>Mínimo de 8 caracteres.</li>
+                    <li id="req-upper" class="invalid"><i class="ph ph-circle"></i>Precisa ter letra maiúscula.</li>
+                    <li id="req-number" class="invalid"><i class="ph ph-circle"></i>Precisa ter número.</li>
+                    <li id="req-special" class="invalid"><i class="ph ph-circle"></i>Precisa ter caracter especial.</li>               
+                </ul>
+            </form>
+        </div>
+    </section>
+
 
 </body>
 </html>
