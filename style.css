@@ -68,6 +68,17 @@ body{
     border: 1px solid var(--border-color);
     padding: 8px 16px; /*espaço ebtre a borda e o texto*/
     border-radius: 6px; /*arredondar a borda*/
-    transition: 0.3s;
-    
+    transition: 0.3s;       
+}
+
+.btn-nav:hover{
+    border-color: var(--text-color);
+}
+
+/*hero section*/
+.hero{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background: radial-gradient(circle at top, #1f2937 0%, #0d1117 70%);
 }
