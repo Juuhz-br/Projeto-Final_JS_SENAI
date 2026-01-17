@@ -11,7 +11,7 @@
     --text-color: #e6edf3;
     --primary-color: #9ae00d;
     --card-bg: #161b22;
-    --border-color:#30363d;
+    --border-color:#9ca4ac;
 }
 
 body{
@@ -40,6 +40,7 @@ body{
 }
 
 .navbar-content{
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,12 +54,20 @@ body{
     gap: 10px;
 }
 
-.logo .highlight{color: var(--primary-color)} /**/
+.logo .highlight{color: var(--primary-color)} 
 
 .menu a{
-
+    text-decoration: none; /*tirar o hiperlink*/
+    color: var(--text-color);
+    margin-left: 20px;/*distancia entre os nomes*/
+    font-size: 12px;     
 }
 
 .btn-nav{
+    /*deixar bordare visivel com o hover*/
+    border: 1px solid var(--border-color);
+    padding: 8px 16px; /*espaço ebtre a borda e o texto*/
+    border-radius: 6px; /*arredondar a borda*/
+    transition: 0.3s;
     
 }
