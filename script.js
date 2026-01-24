@@ -39,14 +39,14 @@ form.addEventListener('submit', function(event) {
     } else {
         senhaInput.classList.remove('input-error'); // msg de erro qd da submit e está fora do padrão ou n digitado
         senhaError.textContent = '';
-    }
+    } // deixei de fora a opção do botão habilitado/desabilitado pq não estava funcionando a validação e n consegui descobrir o pq
 
 
     if (isValid) {
-        alert('Inscrição realizada com sucesso!');
+        alert('Inscrição realizada com sucesso!'); // mostrar que o cadastro foi realizado e reseta os campos
         form.reset(); 
     }
-});
+}); 
 
 emailInput.addEventListener('input', function() {
     emailInput.classList.remove('input-error');
@@ -88,8 +88,8 @@ function updateRequirement(element, isValid) {
 senhaInput.addEventListener('input', function() {
     const senha = senhaInput.value;
     updateRequirement(reqLength, senha.length >= 8); //valida tamanho da senha
-    updateRequirement(reqUpper, /[A-Z]/.test(senha));
-    updateRequirement(reqNumber, /\d/.test(senha));
-    updateRequirement(reqSpecial, /[^A-Za-z0-9]/.test(senha));
+    updateRequirement(reqUpper, /[A-Z]/.test(senha)); //valida letra maiúscula regex
+    updateRequirement(reqNumber, /\d/.test(senha)); //valida número regex
+    updateRequirement(reqSpecial, /[^A-Za-z0-9]/.test(senha)); //valida caráter especial regex
 });
 

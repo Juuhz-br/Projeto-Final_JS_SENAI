@@ -66,7 +66,7 @@ body{
 }
 
 .btn-nav{
-    /*deixar bordare visivel com o hover*/
+    /*deixar borda visivel com o hover*/
     border: 1px solid var(--border-color);
     padding: 8px 16px; /*espaço ebtre a borda e o texto*/
     border-radius: 6px; /*arredondar a borda*/
@@ -244,6 +244,7 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 button[type="submit"]:hover {
     background-color: var(--card-bg);
 }
