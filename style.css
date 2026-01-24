@@ -1,0 +1,281 @@
+/*reset inicial da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*garante que bordas e padding n aumentem o tamanho dos elementos*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{  /*permite mudar atributos em todo o site, alterando em apenas um lugar*/
+    --bg-color: #245255; /*cor principal do plano de fundo*/
+    --text-color: #e6edf3;
+    --primary-color: #9ae00d;
+    --card-bg: #161b22;
+    --border-color:#9ca4ac;
+}
+
+body{
+    background-color: var(--bg-color); /*usa a variavel de cor de fundo*/
+    color: var(--text-color); /*usa a variavel de cor de texto*/
+    line-height: 1.6; /*define espaçamento entre linhas*/
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto; /*sem amrgem e centralizado na tela*/
+    padding: 0 20px;
+
+}
+
+.section-pad{
+    padding: 80px;
+}
+
+.navbar{
+    background-color: #161b22d0;
+    backdrop-filter: blur(10px);
+    position: fixed; /*mantem o menu sempre visívle no topo*/
+    width: 100%; /*header ocupa toda a largura do site*/
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.navbar-content{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .highlight{color: var(--primary-color)} 
+
+.menu a{
+    text-decoration: none; /*tirar o hiperlink*/
+    color: var(--text-color);
+    margin-left: 20px;/*distancia entre os nomes*/
+    font-size: 12px;     
+}
+
+.btn-nav{
+    /*deixar borda visivel com o hover*/
+    border: 1px solid var(--border-color);
+    padding: 8px 16px; /*espaço ebtre a borda e o texto*/
+    border-radius: 6px; /*arredondar a borda*/
+    transition: 0.3s;       
+}
+
+.btn-nav:hover{
+    border-color: var(--text-color);
+}
+
+/*hero section*/
+.hero{
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    margin-top: 80px;
+    background: radial-gradient(circle at top, #1f2937 0%, #0d1117 70%);
+}
+
+
+.tag{
+    background-color: #1f2428;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;  
+}
+
+.hero h1{
+    font-size: 42px;  
+    margin: 20px 0px;      
+ }
+
+
+h2{
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.hero p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #8b949e;
+    margin: 0 auto 40px auto;   
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    
+}
+
+.btn-primary:hover{
+    background-color: var(--bg-color);
+
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.btn-outline:hover{
+    background-color: var(--border-color);
+}
+
+/*módulos 0 que você vai aprender*/
+
+.row{
+    display: flex;
+    gap: 30px; /*distnaciamento entre os cards*/
+    margin-top: 40px;    
+}
+
+.card{
+    flex:1; /*os cards ficam do mesmo tamanho*/
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding:  30px;
+    border-radius: 12px;
+}
+
+.icon-box{
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+
+footer{ /*não precisa do ponto pq n é classe*/
+    text-align: center;
+    padding: 40px;
+    color: #8b949e;
+    border-top: 1px solid var(--border-color);
+}
+
+
+.section-title{
+    text-align: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+
+input{
+    padding: 12px;
+    width: 100%;
+    background-color: #0d1117;
+    color: var(--text-color);
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input:focus{
+    border-color: var(--primary-color);
+}
+
+.validation-list{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.validation-list li{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--card-bg);
+}
+
+.input-error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 40px; 
+}
+
+.validation-list li.valid {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: small;
+}
+
+.validation-list li.invalid {
+    color: white;
+    font-size: small;
+}
