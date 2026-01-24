@@ -37,34 +37,8 @@
             <a href="#modulos" class="btn btn-outline">Explore o conteúdo</a>
         </div>
         </div>
-    </section>
 
-    <section id="modulos" class="section-pad">
-        <div class="container"> <!--reserva o espaço para acomodar as colunas-->
-            <h2 class="section-title">O que você vai aprender neste curso?</h2>
-            <div class="row"> <!-- separar em coluna -->
-                <div class="card"> <!--criar os cards-->
-                    <div class="icon-box">
-                        <i class="ph ph-desktop"></i>
-                    </div> <!--mudar icone-->
-                    <h3>Frontend Moderno</h3>
-                    <p>Crie interfaces e formulários que respondem ao usuário. Domine HTML5, CSS3, 
-                        JavaScript com manipulação de DOM.</p>
-                </div>
-
-                <div class="card"> <!--criar os cards-->
-                    <div class="icon-box">
-                        <i class="ph ph-file-code"></i>
-                    </div> <!--mudar icone-->
-                    <h3>Backend & APIs</h3>
-                    <p>Aprenda os principais conteúdos, construa a lógica do servidor, banco de dados
-                             e regras de negócio com Node.js.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cadastro" class="section-pad bg-darker">
+        <section id="cadastro" class="section-pad bg-darker">
         <div class="container form-wrapper">
             <h2>Garanta sua vaga</h2>
             <form id="formCadastro">
@@ -76,11 +50,13 @@
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="seu@email.com">
+                    <span id="email-error" class="error-message"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" placeholder="Mínimo 8 caracteres.">
+                    <span id="senha-error" class="error-message"></span>
 
                 <ul class="validation-list">
                     <li id="req-length" class="invalid"><i class="ph ph-circle"></i>Mínimo de 8 caracteres.</li>
@@ -94,6 +70,10 @@
         </div>
     </section>
 
+
+    </section>
+
+    
     <footer>
         <p>&copy; 2026 CodingLabs. Todos os direitos reservados.</p>
     </footer>
