@@ -7,14 +7,16 @@ const senhaInput = document.getElementById('senha');
 const senhaError = document.getElementById('senha-error');
 
 
+// adicionar ouvinte de evento para o envio do formulário
+
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
     let isValid = true; 
     const email = emailInput.value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //teste do formato do email
 
     if (!emailRegex.test(email)) {
-        emailInput.classList.add('input-error');
+        emailInput.classList.add('input-error'); //msg de erro qd da submit e está fora do padrão ou n digitado
         emailError.textContent = 'Por favor, insira um e-mail válido.';
         isValid = false;
     } else {
@@ -26,16 +28,16 @@ form.addEventListener('submit', function(event) {
     // validação da senha
 
     const senha = senhaInput.value;
-    const hasUpperCase = /[A-Z]/.test(senha);
-    const hasNumber = /\d/.test(senha);
-    const hasSpecial = /[^A-Za-z0-9]/.test(senha);
+    const hasUpperCase = /[A-Z]/.test(senha); // letra maipuscula
+    const hasNumber = /\d/.test(senha); //número
+    const hasSpecial = /[^A-Za-z0-9]/.test(senha); //regex caracter especial
 
-    if (senha.length < 8 || !hasUpperCase || !hasNumber || !hasSpecial) {
+    if (senha.length < 8 || !hasUpperCase || !hasNumber || !hasSpecial) { //verifica se a senha está no padrão
         senhaInput.classList.add('input-error');
-        senhaError.textContent = 'A senha está fora do padrão.';
+        senhaError.textContent = 'A senha está fora do padrão.'; //msg de erro qd da submit e está fora do padrão
         isValid = false;
     } else {
-        senhaInput.classList.remove('input-error');
+        senhaInput.classList.remove('input-error'); // msg de erro qd da submit e está fora do padrão ou n digitado
         senhaError.textContent = '';
     }
 
@@ -81,11 +83,11 @@ function updateRequirement(element, isValid) {
 }
 
 
-// adicionar ouvinte de evento para o campo de senha
+// adicionar ouvinte de evento para o campo de senha / a cada tecla digitada
 
 senhaInput.addEventListener('input', function() {
     const senha = senhaInput.value;
-    updateRequirement(reqLength, senha.length >= 8);
+    updateRequirement(reqLength, senha.length >= 8); //valida tamanho da senha
     updateRequirement(reqUpper, /[A-Z]/.test(senha));
     updateRequirement(reqNumber, /\d/.test(senha));
     updateRequirement(reqSpecial, /[^A-Za-z0-9]/.test(senha));
