@@ -1,3 +1,5 @@
+// selecionar os elementos do formulário e dos campos de entrada
+
 const form = document.querySelector('form');
 const emailInput = document.getElementById('email');
 const emailError = document.getElementById('email-error');
@@ -19,6 +21,9 @@ form.addEventListener('submit', function(event) {
         emailInput.classList.remove('input-error');
         emailError.textContent = '';
     }
+
+
+    // validação da senha
 
     const senha = senhaInput.value;
     const hasUpperCase = /[A-Z]/.test(senha);
@@ -52,10 +57,15 @@ senhaInput.addEventListener('input', function() {
 });
 
 
-const reqLength = document.getElementById('req-length');
-const reqUpper = document.getElementById('req-upper');
-const reqNumber = document.getElementById('req-number');
-const reqSpecial = document.getElementById('req-special');
+// selecionar os itens da lista de requisitos
+
+const reqLength = document.getElementById('req-length'); //tamanho mínimo
+const reqUpper = document.getElementById('req-upper'); // maiúscula obrigatória
+const reqNumber = document.getElementById('req-number'); // número obrigatório
+const reqSpecial = document.getElementById('req-special'); //caráter especial obrigatório
+
+
+// função para atualizar o estado dos requisitos
 
 function updateRequirement(element, isValid) {
     const icon = element.querySelector('i');
@@ -69,6 +79,9 @@ function updateRequirement(element, isValid) {
         icon.classList.replace('ph-check-circle', 'ph-circle');
     }
 }
+
+
+// adicionar ouvinte de evento para o campo de senha
 
 senhaInput.addEventListener('input', function() {
     const senha = senhaInput.value;
