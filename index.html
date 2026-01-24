@@ -38,24 +38,26 @@
         </div>
         </div>
 
-        <section id="cadastro" class="section-pad bg-darker">
+        <section id="cadastro-form" class="section-pad bg-darker">
         <div class="container form-wrapper">
             <h2>Garanta sua vaga</h2>
-            <form id="formCadastro">
+            <form action="#" method="post" novalidate>
+                <!--  </form> <form id="formCadastro"> -->
+             
                 <div class="input-group">
                     <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                 </div>
 
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="seu@email.com">
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                     <span id="email-error" class="error-message"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Mínimo 8 caracteres.">
+                    <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres." required>
                     <span id="senha-error" class="error-message"></span>
 
                 <ul class="validation-list">
@@ -65,15 +67,11 @@
                     <li id="req-special" class="invalid"><i class="ph ph-circle"></i>Precisa ter caracter especial.</li>               
                 </ul>
                 </div>
-                <button type="submit" id="btnSubmit" class="btn btn-full" disabled>FINALIZAR CADASTRO</button>
+                <button type="submit">FINALIZAR CADASTRO</button>
             </form>
         </div>
     </section>
-
-
     </section>
-
-    
     <footer>
         <p>&copy; 2026 CodingLabs. Todos os direitos reservados.</p>
     </footer>
